@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Account",
+  "type": "object",
+  "description": "An Account",
+  "required": ["Account"],
+  "properties": {
+    "Account": {
+      "type": "object",
+      "description": "An Account",
+      "required": ["Id"],
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the Account"
+        },
+        "Name": {
+          "type": "string",
+          "description": "Name of the Account"
+        },
+        "Number": {
+          "type": "string",
+          "description": "The Account Number"
+        },
+        "Addresses": {
+          "type": "object",
+          "description": "Addresses of the Account",
+          "required": ["Address"],
+          "properties": {
+            "Address": {
+              "type": "array",
+              "description": "Array of Addresses of the Account",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "City": {
+                    "type": "string",
+                    "description": "City of the Address"
+                  },
+                  "Country": {
+                    "type": "string",
+                    "description": "Country of the Address"
+                  },
+                  "Line1": {
+                    "type": "string",
+                    "description": "Line 1 of the Address"
+                  },
+                  "Line2": {
+                    "type": ["string", "null"],
+                    "description": "Line 2 of the Address"
+                  },
+                  "Line3": {
+                    "type": ["string","null"],
+                    "description": "Line 3 of the Address"
+                  },
+                  "PostalCode": {
+                    "type": "string",
+                    "description": "Postal Code of the Address"
+                  },
+                  "State": {
+                    "type": "string",
+                    "description": "State of the Address"                      
+                  },
+                  "Type": {
+                    "type": "string",
+                    "description": "Type of Address"                      
+                  }
+                }
+              }
+            }
+          }
+        },
+		"PhoneNumbers": {
+          "type": "object",
+          "description": "Phone Numbers of the Contact",
+          "required": ["PhoneNumber"],
+          "properties": {
+            "PhoneNumber": {
+              "type": "array",
+              "description": "Array of Phone Numbers of the Contact",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Number": {
+                    "type": "string",
+                    "description": "Phone Number of the Contact"
+                  },
+                  "PhoneType": {
+                    "type": "integer",
+                    "description": "Type of Phone Number"
+                  }
+                }
+              }
+            }
+          }
+        },
+		"EmailAddresses": {
+          "type": "object",
+          "description": "Email Addresses of the Contact",
+          "required": ["EmailAddress"],
+          "properties": {
+            "EmailAddress": {
+              "type": "array",
+              "description": "Array of Email Addresses of the Contact",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "EmailAddress": {
+                    "type": "string",
+                    "description": "Email Address of the Contact"
+                  },
+                  "EmailType": {
+                    "type": "integer",
+                    "description": "Type of Email Address"
+                  }
+                }
+              }
+            }
+          }
+        },
+		"CustomAttribute": {
+		  "type": ["string","null"],
+		  "description": "The value of the custom attribute provided in the request"
+		}
+      }
+    }
+  }
+}

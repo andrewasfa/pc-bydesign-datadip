@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "PhoneNumberRequest",
+    "description": "A phone number based request",
+    "required": [
+        "PhoneNumber"
+    ],
+    "type": "object",
+    "properties": {
+        "PhoneNumber": {
+            "type": "string",
+            "description": "The phone number used to query the CRM"
+        },
+		"CustomAttribute": {
+          "type": "string",
+          "description": "Additional attribute requested"
+        }
+    }
+}
