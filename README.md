@@ -54,7 +54,7 @@ In the configuration point it to the server running the integration service (*./
 You may need to contact your SAP administrator to perform the following steps.
 1. Create new **Communication System**
 2. Create new **Communication Scenario** -> **Get Business partner data**
-3. Create new **Communication Arrangement**, create new *credentials*.
+3. Create new **Communication Arrangement**, create new *credentials*. 
 4. Download the WSDL for the Accounts and save it in the ./server directory under *accounts.wsdl* name.
 
 Screen pop in SAP: http://scn.sap.com/docs/DOC-69501
