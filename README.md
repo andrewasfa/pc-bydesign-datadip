@@ -23,8 +23,14 @@ http://help.sap.com/saphelp_byd1608/en/PUBLISHING/IntegrationServices.html
                                           |                       |
                                          ReST                    SOAP
 
-
-------------
 ```
+-----------
+# Requirements
+- server running NodeJS and npm
+
+# Install instructions
+1) Download and uncompress the package (or clone)
+2) Install the  dependencies `npm install`
+3) Navigate to the root directory and run the service `node .` 
 
 -----------------
