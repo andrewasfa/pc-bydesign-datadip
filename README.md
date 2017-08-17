@@ -23,7 +23,7 @@ http://help.sap.com/saphelp_byd1608/en/PUBLISHING/IntegrationServices.html
 
 ```
 -----------
-#Requirements
+# Requirements
 ## Installation requirements
 - server running **NodeJS** and **npm**
 
@@ -39,8 +39,11 @@ http://help.sap.com/saphelp_byd1608/en/PUBLISHING/IntegrationServices.html
 2. Install the  dependencies `npm install`
 3. Navigate to the root directory and run the service `node .`
 
+*Note: for production environment, you may want to use PM2 (http://pm2.keymetrics.io/)  as a process manager for this NodeJS application to allow for automated start, logging and restart of the process if it crashes. Here is a good intro to setting up PM2: https://www.digitalocean.com/community/tutorials/how-to-use-pm2-to-setup-a-node-js-production-environment-on-an-ubuntu-vps 
+
+
 ## Setup PureCloud
-1. Install the Bridge Server.
+1. Install the Bridge Server - https://help.mypurecloud.com/articles/install-bridge-server/ .
 2. Create the Web Service Data Dip action hosted on the Bridge server from step 1. \
 In the configuration point it to the server running the integration service (*./extra/ConnectorConfig.png*)
 3. Create an IVR call flow (consult example *./extra/SAP_lookup.i3InboundFlow*).
